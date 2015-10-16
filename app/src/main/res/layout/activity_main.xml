@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff00">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:columnCount="6"
+        android:rowCount="3">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="x1" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:ems="4"
+            android:inputType="numberDecimal|numberSigned"
+            android:text="-2.25">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="x2" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_column="3"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:ems="4"
+            android:inputType="numberDecimal|numberSigned"
+            android:text="0.75" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_column="4"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="iter" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_column="5"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:ems="4"
+            android:inputType="number"
+            android:text="100" />
+
+        <!-- zweite Reihe -->
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="y1" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:ems="4"
+            android:inputType="numberDecimal|numberSigned"
+            android:text="-1.5" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="2"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:text="y2" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_column="3"
+            android:layout_gravity="left|top"
+            android:layout_row="1"
+            android:ems="4"
+            android:inputType="numberDecimal|numberSigned"
+            android:text="1.5" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_column="4"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal|top|left"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_row="1"
+            android:background="@color/accent"
+            android:text="Calculate" />
+
+    </GridLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/grid"
+        android:layout_gravity="fill"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+</RelativeLayout>
